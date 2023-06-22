@@ -1,77 +1,482 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Pedido de Namoro</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 100px;
-      }
+<html lang="en">
 
-      h1 {
-        color: #333;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-      #yes-button {
-        display: inline-block;
-        background-color: #4caf50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        margin-right: 10px;
-      }
+  <title>Drugstore Iuri</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-      #no-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f44336;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-      }
+  <!-- Favicons -->
+  <link href="assets/img/Drugstore.svg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-      #message {
-        margin-top: 20px;
-        display: none;
-        font-size: 24px;
-        color: #4caf50;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Você aceita namorar comigo?</h1>
-    <button id="yes-button">Sim</button>
-    <button id="no-button">Não</button>
-    <div id="message">Melhor escolha!</div>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#yes-button").click(function () {
-          $("#yes-button").hide();
-          $("#no-button").hide();
-          $("#message").show();
-        });
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        $("#no-button").click(function () {
-          var windowHeight = $(window).height();
-          var windowWidth = $(window).width();
-          var newTop = Math.random() * (windowHeight - 100);
-          var newLeft = Math.random() * (windowWidth - 100);
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
 
-          $("#no-button").css({
-            top: newTop + "px",
-            left: newLeft + "px",
-          });
-        });
-      });
-    </script>
-  </body>
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="https://twitter.com/kaique_3012" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/kaique_3012/?hl=pt-br" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/kaíque-santos-52662a243/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">DrugStore Iuri</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Profissionais</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#services" class="appointment-btn scrollto"><span class="d-none d-md-inline">Veja os</span> Produtos</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Bem-Vindo a DrugStore</h1>
+      <h2>Nosso time é competente e qualificado para te atender </h2>
+      <a href="#services" class="btn-get-started scrollto">Ver os Produtos</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Por que escolher a Drugstore Iuri?</h3>
+              <p>
+                DrugStore é a mais completa loja online de produtos hormonais do mercado! Max, Growth e qualquer outra marca não chega aos
+                pés.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Ler Mais<i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Empresa Dedicada</h4>
+                    <p>Localização privilegiada ao lado do presídio.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Segurança em primeiro lugar!</h4>
+                    <p>Produtos de procedência duvidosa, mas testados!</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Admire!</h4>
+                    <p>Mandamos uma foto de Iuri atrás da caixa para alertar (tipo cigarro).</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Carisma e Personalidade!</h3>
+            <p>Esse são os fatores responsáveis por deixar a DrugStore superior e melhor do que todos! Aqui você é valorizado, tira 85 por causa de um restar Apache2, tem 5 segundos para responder uma prova e no final ganha esse belo sorriso (foto esquerda).</p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Identidade</a></h4>
+              <p class="description">Nós nos identificamos como a melhor empresa.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Promoção de Natal</a></h4>
+              <p class="description">Se o papai noel estiver vendendo por um preço mais baixo, NÓS COBRIMOS.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-atom"></i></div>
+              <h4 class="title"><a href="">Perfeito para sua Genética</a></h4>
+              <p class="description">Não importa se você é magro, alto, feio, gordo, calvo ou até mesmo um Kaique da vida, você tem salvação.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Produtos</h2>
+          <p>Aproveite as ofertas dos produtos! Preço muito baixo você só encontra na DrugStore Iuri!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <img src="assets/img/Boldenona.png" class="img-fluid"></img>
+              <h4><a href="">Boldenona</a></h4>
+              <p>Boldenona é um esteróide veterinário injectável que é geralmente utilizado como uma droga auxiliar. Feita para cavalos, foi descoberta por fisiculturistas e é usada para aumento de volume e força muscular</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <img src="assets/img/GH.png" class="img-fluid"></img>
+              <h4><a href="">Growth Hormone (GH)</a></h4>
+              <p>GH tem ação anabólica, ao estimular o crescimento tecidual, e metabólica, alterando o fluxo, a oxidação e o metabolismo de praticamente todos os nutrientes na circulação.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <img src="assets/img/Trembolona.png" class="img-fluid"></img>
+              <h4><a href="">Trembolona</a></h4>
+              <p>A trembolona aumenta a síntese proteica que promove uma recuperação muscular muito rápida pós treino e também aumenta abruptamente a síntese de hidrogênio que promove uma vascularização maior e consequentemente "veias saltadas"</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <img src="assets/img/Deca.png" class="img-fluid"></img>
+              <h4><a href="">Deca</a></h4>
+              <p>Deca-Durabolin® pode ser utilizado para aumentar a massa corporal magra, no caso de balanço negativo de nitrogênio. Também pode ser utilizado para aumentar a massa óssea em caso de osteoporose (perda de tecido ósseo).</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <img src="assets/img/Dilatex.png" class="img-fluid"></img>
+              <h4><a href="">Dilatex</a></h4>
+              <p>Ajuda a eliminar a fadiga; Energia duradoura; Maior resistência; Vasodilatação (PUMP); Promove uma rápida absorção de aminoácidos; Auxilia no ganho de massa muscular.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <img src="assets/img/Enantato.png" class="img-fluid"></img>
+              <h4><a href="">Enantato</a></h4>
+              <p>O enantato de noretisterona + valerato de estradiol é indicado para prevenir a gravidez. Os contraceptivos hormonais injetáveis são um método muito eficaz de controle de natalidade. Quando utilizados corretamente (sem atraso ou esquecimento das injeções), a possibilidade de ocorrência de gravidez é muito baixa.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Formações</h2>
+          <p>Ainda não confia no nosso trabalho? Então conheça as formações do Mestre Iuri e se encante!</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Bíceps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Tríceps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Peitoral</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Quadríceps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Costas</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Bíceps</h3>
+                    <p class="fst-italic">Um ponto forte e complementar do tríceps</p>
+                    <p>Durante seus treinamentos desengoçados do crossfit ele adquiriu um poderoso bíceps para exibir durante suas aulas.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/biceps.jpeg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Tríceps</h3>
+                    <p class="fst-italic">O "parceiro" do bíceps e o mais importante para o braço</p>
+                    <p>Nada como um bom afundo no banco, tríceps corda, tríceps testa e coice para deixar essa marca que rouba a cena.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/triceps.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Peitoral</h3>
+                    <p class="fst-italic">E é uma pia?</p>
+                    <p>É aquela famosa frase "Taca na caixa dos peitos do pai que eu domino", e pra falar a verdade, acho que dominava mesmo.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/peitoral.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Quadríceps</h3>
+                    <p class="fst-italic">Leg de 400kg?!</p>
+                    <p>É tão secreto que nunca foi visto, será que é potente mesmo ou a falta de panturrilha vai roubar a cena?</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/quadriceps.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Costas</h3>
+                    <p class="fst-italic">Tá parecendo um Urubu</p>
+                    <p>Se estiver em um barco com vela e ela rasgou, o que fazer? Abre a dorsal ai pae.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/costas.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Profissionais</h2>
+          <p>Conheça a equipe por trás da DrugStore Iuri</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/Mestre Yuri.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Iuri Souza</h4>
+                <span>Consumidor ativo dos produtos e CEO</span>
+                <p>Responsável por testar todas as mercadorias e comandar a empresa</p>
+                <div class="social">
+                  <a href="https://www.instagram.com/iurisouzas/?hl=pt-br"><i class="ri-instagram-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Doctors Section -->
+
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Galeria</h2>
+          <p>Conheça um pouco da História do nosso CEO Iuri Souza através de algumas imagens</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/Mestre Yuri.png" class="galelry-lightbox">
+                <img src="assets/img/Mestre Yuri.png" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/show.png" class="galelry-lightbox">
+                <img src="assets/img/show.png" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/about.jpg" class="galelry-lightbox">
+                <img src="assets/img/about.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/iuritrain.jpg" class="galelry-lightbox">
+                <img src="assets/img/iuritrain.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Localização</h2>
+          <p>Localização oficial da DrugStore Iuri, se não encontrar procure na casa de Daniel</p>
+        </div>
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.598749963584!2d-37.07124835058853!3d-6.445534564795514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7afec3b2216fb6d%3A0xfd0a7ee7ca8257a9!2sIFRN%20Campus%20Caic%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1671329075078!5m2!1spt-BR!2sbr" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>DrugStore Iuri</h3>
+            <p>
+              Nova <br>
+              Caicó - RN 59300-000<br>
+              Brasil <br><br>
+              <strong>Phone:</strong> 55 (84) 9 9940-2394<br>
+              <strong>Email:</strong> kaique.s@escolar.ifrn.edu.br<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Principais Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Produtos</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>DrugStore Iuri</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com/kaique_3012" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/kaique_3012/?hl=pt-br" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/kaíque-santos-52662a243/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
